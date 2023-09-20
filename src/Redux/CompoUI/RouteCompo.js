@@ -10,9 +10,9 @@ function RouteCompo() {
     return (
         <div>
             <div className='navflex'>
-                <NavLink to="/"><h1>Home</h1></NavLink>
-                <NavLink to="/student"><h1>Student</h1></NavLink>
-                <NavLink to="/contact"><h1>Contact</h1></NavLink>
+                <NavLink style={({ isActive }) => ({ color: isActive ? "white" : "purple" })} to="/"><h1>Home</h1></NavLink>
+                <NavLink style={({ isActive }) => ({ color: isActive ? "white" : "purple" })} to="/student"><h1>Student</h1></NavLink>
+                <NavLink style={({ isActive }) => ({ color: isActive ? "white" : "purple" })} to="/contact"><h1>Contact</h1></NavLink>
             </div>
             <Routes>
                 <Route path="/contact" element={<Contact />}></Route>
